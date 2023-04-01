@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Image Vault</title>
+    </head>
+    <body>
+        <h1>Store your images in this vault!</h1>
+
+        <main>
+            <div class="left">
+                <div class="submission">
+                    <input
+                        type="text"
+                        placeholder="Link to img file"
+                        class="img-link"
+                    />
+                    <button type="submit" class="lock-btn lock">Lock Vault</button>
+                </div>
+                <div class="vault">
+                    <p class="passcode hidden">0</p>
+
+                    <div class="keys">
+                        <button class="key 1 key-no">1</button>
+                        <button class="key 2 key-no">2</button>
+                        <button class="key 3 key-no">3</button>
+                        <button class="key 4 key-no">4</button>
+                        <button class="key 5 key-no">5</button>
+                        <button class="key 6 key-no">6</button>
+                        <button class="key 7 key-no">7</button>
+                        <button class="key 8 key-no">8</button>
+                        <button class="key 9 key-no">9</button>
+                        <button class="key key-short 0 key-no">0</button>
+                        <button class="key clear">Clear</button>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="image">
+                    <img class="selected-img hidden" />
+                </div>
+            </div>
+        </main>
+        <script src="main.js"></script>
+    </body>
+</html>

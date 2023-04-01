@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(#000000, #0f9b0f);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #0f9b0f;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+    font-size: 70px;
+
+    margin-top: 50px;
+}
+
+main {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 40px;
+
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+button {
+    display: block;
+    transition-duration: 0.3s;
+}
+
+.img-link {
+    /* width: 500px;
+    height: 50px; */
+    font-size: 30px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+
+    flex: 70%;
+    height: 120%;
+}
+
+.lock-btn {
+    flex: 30%;
+    height: 130%;
+    margin-left: 5px;
+
+    font-size: 30px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+}
+
+button:hover {
+    background-color: #acffa188;
+}
+
+.vault {
+    width: 55%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    flex-wrap: wrap;
+}
+
+.passcode {
+    flex: 100%;
+    text-align: center;
+    font-size: 300%;
+    color: white;
+}
+
+.submission {
+    display: flex;
+    width: 55%;
+}
+
+.keys {
+    width: 100%;
+    height: 100%;
+    flex: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.key {
+    font-family: "Raleway", sans-serif;
+    font-size: 40px;
+    margin: 2%;
+    background-color: #000000;
+    color: white;
+    width: 26%;
+    flex: 27%;
+    height: 25%;
+}
+
+.key-short {
+    flex: 100%;
+}
+
+.left,
+.right {
+    flex-direction: column;
+    flex: 50%;
+    display: flex;
+    align-items: center;
+    padding-top: 5%;
+    overflow: hidden;
+}
+
+.hidden {
+    opacity: 0%;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        flex-wrap: wrap;
+    }
+
+    .left {
+        flex: 100%;
+        width: 100%;
+    }
+
+    body {
+        overflow: scroll;
+        
+    }
+}
