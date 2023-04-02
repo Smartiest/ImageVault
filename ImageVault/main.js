@@ -1,5 +1,6 @@
 "use strict";
 
+// Defining items on webpage
 const imgLink = document.querySelector(".img-link");
 const buttons = Array.from(document.querySelectorAll(".key-no"));
 
@@ -12,7 +13,7 @@ const selectedImg = document.querySelector(".selected-img");
 let images = {};
 let currentPasscode = "";
 
-function resetPasscode() {
+function resetPasscode() { // resets passcode shown on screen
     currentPasscode = "";
     passcode.textContent = "0";
     passcode.classList.add("hidden");
@@ -26,7 +27,7 @@ function isLinkValid(link) {
     }
 }
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) { // buttons(keys) function
     buttons[i].addEventListener("click", function () {
         if (currentPasscode.length >= 10) {
             window.alert("Password cannot exceed 10 numbers.");
@@ -40,13 +41,14 @@ for (let i = 0; i < 10; i++) {
     });
 }
 
-clearBtn.addEventListener("click", function () {
+clearBtn.addEventListener("click", function () { // clear button function
     resetPasscode();
 
     selectedImg.classList.add("hidden");
 });
 
-imgLink.addEventListener("input", function (link) {
+imgLink.addEventListener("input", function (link) { 
+    //inputing something into image link function
     if (!link.target.value.toString()) {
         lockBtn.textContent = "Unlock Vault";
         lockBtn.classList.remove("lock");
@@ -62,8 +64,8 @@ imgLink.addEventListener("input", function (link) {
     lockBtn.classList.add("lock");
 });
 
-lockBtn.addEventListener("click", function () {
-    if (lockBtn.classList.contains("lock")) {
+lockBtn.addEventListener("click", function () { // lock/unlock vault function
+    if (lockBtn.classList.contains("lock")) { // lock function
         if (!currentPasscode) {
             window.alert("No password found!");
             return;
@@ -93,7 +95,7 @@ lockBtn.addEventListener("click", function () {
 
         lockBtn.textContent = "Unlock Vault";
         lockBtn.classList.remove("lock");
-    } else {
+    } else { // unlock function
         console.log(images);
         if (images[Number(currentPasscode)]) {
             selectedImg.src = images[Number(currentPasscode)];
